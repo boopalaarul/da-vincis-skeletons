@@ -1,0 +1,14 @@
+// all layout does here is define <head>, w/ link to main stylesheet
+// the "block content" first used in layout, here it is defined
+extends layout
+
+//any new tailwind classes added here need to be built into an actual css
+//file, have added the command that does that to "npm run start"
+block content
+  h2 see if this breaks 
+  //preset font families can be changed in configuration file
+  //animations seem harder to change but we'll see
+  h1(class="text-3xl font-bold underline") ayayayay #{title}
+  h2(class="font-serif") ayayayayay
+  h2(class="hover:animate-bounce mt-10") Does he know?
+  p Welcome to #{title}
