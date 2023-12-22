@@ -3,7 +3,8 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/output.css')
-  body(class="bg-gradient-to-tr from-transparent from-50% via-slate-950 via-35% to-slate-900")
-    block header
-    block content
-    block footer
+  body(class="dark" id="body")
+    div(class="bg-slate-200 text-black dark:text-white dark:bg-black dark:bg-gradient-to-tr from-transparent from-50% via-slate-950 via-35% to-slate-900")
+      block header
+      block content
+      block footer

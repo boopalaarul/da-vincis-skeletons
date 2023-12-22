@@ -24,3 +24,12 @@ async function getTextByFigure(event) {
 }
 
 target_btns.forEach((target) => target.addEventListener("click", getTextByFigure))
+
+/**Dark Mode Toggle */
+const body = document.querySelector("#body")
+let darkMode = true
+function toggle(event) {
+    darkMode ? body.classList.remove("dark") : body.classList.add("dark")
+    darkMode = !darkMode
+}
+document.querySelector("#dark-light-toggle").addEventListener("click", toggle)

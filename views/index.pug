@@ -1,33 +1,38 @@
 extends layout
 
 block header
-  div(class="bg-inherit pt-10 pb-6 px-6")
-    h1 skeleton
+  div(class="bg-rose-800 dark:bg-inherit flex flex-row bg-inherit pt-10 pb-6 px-10")
+    h1(class="text-white grow text-3xl font-serif font-bold") DA VINCI'S SKELETONS
+    button(id="dark-light-toggle" class="bg-white dark:bg-slate-800 rounded-lg px-3 py-2 text-base") Dark/Light Toggle
   //to-r, gradient 'to right', in that direction
-  div(class="h-1.5 bg-gradient-to-r from-indigo-600 to-rose-600")
+  div(class="h-1.5 dark:bg-gradient-to-r from-indigo-600 to-rose-600")
 
 block content
   div(class="m-10")
-    div(class="flex flex-wrap w-full p-4 border-solid border-2 border-white")
+    div(class="flex flex-wrap w-full p-4 border-solid border-2 border-rose-800 dark:border-white")
       //sm applies to elements w min width of 640px-- need default rule that applies to 
       //smaller screens
-      div(class="w-full md:w-3/5")
+      div(class="w-full md:w-3/5 relative")
         img(src="/images/engraving_mirrored.jpg" alt="Da Vinci Drawing / Bartolozzi Engraving")
         //might later be possible to have the full mirrored image up, and
         //the caption would just cover the lower part of it?
         img(src="/images/engraving_caption.jpg" alt="Bartolozzi Caption")
-        img(class="target-colored animate-pulse hover:animate-none" src="/images/target.png" id="epigraph" alt="Target Marker 1")
-        img(class="target-colored animate-pulse hover:animate-none" src="/images/target.png" id="anterior_thorax" alt="Target Marker 2")
-        img(class="target-colored animate-pulse hover:animate-none" src="/images/target.png" id="lateral_thorax" alt="Target Marker 3")
-        img(class="target-colored animate-pulse hover:animate-none" src="/images/target.png" id="posterior_thorax" alt="Target Marker 4")
-        img(class="target-colored animate-pulse hover:animate-none" src="/images/target.png" id="caption" alt="Target Marker 5")  
+        img(class="target-colored animate-pulse hover:animate-none absolute left-[10%] top-[5%]" src="/images/target.png" id="epigraph" alt="Target Marker 1")
+        img(class="target-colored animate-pulse hover:animate-none absolute left-[90%] top-[60%]" src="/images/target.png" id="anterior_thorax" alt="Target Marker 2")
+        img(class="target-colored animate-pulse hover:animate-none absolute left-[10%] top-[25%]" src="/images/target.png" id="lateral_thorax" alt="Target Marker 3")
+        img(class="target-colored animate-pulse hover:animate-none absolute left-[90%] top-[20%]" src="/images/target.png" id="posterior_thorax" alt="Target Marker 4")
+        img(class="target-colored animate-pulse hover:animate-none absolute left-[75%] top-[90%]" src="/images/target.png" id="caption" alt="Target Marker 5")  
       div(class="w-full md:w-2/5 p-8")
-        div(class="flex flex-col justify-center space-y-1") 
+        div(class="flex flex-col justify-center space-y-5") 
           h1(class="text-2xl font-bold" id="figure-title")
-          p(id="figure-text")
+          p(id="figure-text" class="font-serif")
           p(id="figure-comments")
+    div 
+      p Translations sourced from pages 40, 41, and 489 of the 1983 edition of #[i Leonardo on the Human Body], edited by Malley and Saunders.
+      p If you liked this website, #[a(href="https://archive.org/details/leonardoonhumanb0000leon") borrow the book for up to 14 days on Internet Archive], or buy it- you won't find a better resource on the subject.
     //script that adds the event handlers
     script(src="/src/figureReader.js")
   
 block footer
-  p Contact me
+  div(class="text-white bg-rose-800 dark:bg-slate-900 pt-4 pb-12 px-6")
+    p View source code on Github

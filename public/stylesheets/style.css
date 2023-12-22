@@ -5,7 +5,9 @@
 @layer components {
   /*adds color to target markers*/
   .target-colored {
-    filter:invert(30%) sepia(100%) saturate(500%) hue-rotate(300deg)
+    filter:invert(30%) sepia(100%) saturate(500%) hue-rotate(300deg);
+    width: 2.5vw;
+    height: auto;
   }
   /* ... */
 }
@@ -16,7 +18,7 @@
 
 body {
   /*padding: 50px;*/
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: black;
   color: white;
 }
