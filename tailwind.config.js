@@ -5,7 +5,11 @@ module.exports = {
  * in other words, paths to all html and js files in the project */
   content: ["./**/*.pug"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+	'header': '#d5c19c',
+      },
+    },
   },
   plugins: [],
 }

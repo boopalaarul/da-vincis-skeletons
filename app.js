@@ -17,6 +17,11 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+//__dirname looks like it's automatically generated somewhere... node CLI
+//doesn't have a value for it, maybe it's in package.json?
+//all links or script src values seem to use this as root-- express's 
+//"static-serve" middleware can only serve from one folder
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);

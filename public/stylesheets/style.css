@@ -2,9 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* using this as a kind of "global rules" set that precedes Tailwind rules,
+ * since Tailwind config theme customization seems like it's specifically
+ * building blocks for the TW rules, not for what precedes them*/
+
 body {
-  padding: 50px;
+  /*padding: 50px;*/
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black;
+  color: white;
 }
 
 a {
