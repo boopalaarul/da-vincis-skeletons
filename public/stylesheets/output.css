@@ -544,6 +544,14 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+/*adds color to target markers*/
+
+.target-colored {
+  filter:invert(30%) sepia(100%) saturate(500%) hue-rotate(300deg)
+}
+
+/* ... */
+
 .m-10 {
   margin: 2.5rem;
 }
@@ -572,12 +580,32 @@ video {
   width: 100%;
 }
 
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
 
 .justify-center {
   justify-content: center;
+}
+
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
 .border-2 {
@@ -663,6 +691,11 @@ video {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -707,12 +740,16 @@ a {
   animation: bounce 1s infinite;
 }
 
-@media (min-width: 640px) {
-  .sm\:w-2\/5 {
+.hover\:animate-none:hover {
+  animation: none;
+}
+
+@media (min-width: 768px) {
+  .md\:w-2\/5 {
     width: 40%;
   }
 
-  .sm\:w-3\/5 {
+  .md\:w-3\/5 {
     width: 60%;
   }
 }

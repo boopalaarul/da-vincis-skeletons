@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  /*adds color to target markers*/
+  .target-colored {
+    filter:invert(30%) sepia(100%) saturate(500%) hue-rotate(300deg)
+  }
+  /* ... */
+}
 
 /* using this as a kind of "global rules" set that precedes Tailwind rules,
  * since Tailwind config theme customization seems like it's specifically

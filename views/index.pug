@@ -9,28 +9,25 @@ block header
 block content
   div(class="m-10")
     div(class="flex flex-wrap w-full p-4 border-solid border-2 border-white")
-      //sm applies to elements w min width of 640px-- could be smaller
-      div(class="w-full sm:w-3/5")
+      //sm applies to elements w min width of 640px-- need default rule that applies to 
+      //smaller screens
+      div(class="w-full md:w-3/5")
         img(src="/images/engraving_mirrored.jpg" alt="Da Vinci Drawing / Bartolozzi Engraving")
         //might later be possible to have the full mirrored image up, and
         //the caption would just cover the lower part of it?
         img(src="/images/engraving_caption.jpg" alt="Bartolozzi Caption")
-        img(src="/images/target.png" id="target-1" alt="Target Marker 1")
-        img(src="/images/target.png" id="target-2" alt="Target Marker 2")
-        img(src="/images/target.png" id="target-3" alt="Target Marker 3")
-        img(src="/images/target.png" id="target-4" alt="Target Marker 4")
-        img(src="/images/target.png" id="target-5" alt="Target Marker 5")
-        img(src="/images/target.png" id="target-6" alt="Target Marker 6")
-      div(class="w-full sm:w-2/5 p-8")
-        div(class="flex justify-center") 
-          h1 Femur
-    h1(class="text-3xl font-bold underline") ayayayay #{title}
-    h2(class="font-serif") ayayayayay
-    h2(class="hover:animate-bounce mt-10") Does he know?
-    p Welcome to #{title}
-    //this can't work, see the js file for more info
-    //#root
-    //script(type="module" src="/src/react-root.js")
+        img(class="target-colored animate-pulse hover:animate-none" src="/images/target.png" id="epigraph" alt="Target Marker 1")
+        img(class="target-colored animate-pulse hover:animate-none" src="/images/target.png" id="anterior_thorax" alt="Target Marker 2")
+        img(class="target-colored animate-pulse hover:animate-none" src="/images/target.png" id="lateral_thorax" alt="Target Marker 3")
+        img(class="target-colored animate-pulse hover:animate-none" src="/images/target.png" id="posterior_thorax" alt="Target Marker 4")
+        img(class="target-colored animate-pulse hover:animate-none" src="/images/target.png" id="caption" alt="Target Marker 5")  
+      div(class="w-full md:w-2/5 p-8")
+        div(class="flex flex-col justify-center space-y-1") 
+          h1(class="text-2xl font-bold" id="figure-title")
+          p(id="figure-text")
+          p(id="figure-comments")
+    //script that adds the event handlers
+    script(src="/src/figureReader.js")
   
 block footer
   p Contact me
